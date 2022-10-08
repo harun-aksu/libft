@@ -3,112 +3,150 @@
 #include <string.h>
 #include "libft.h"
 
+
 int main(int argc, char **argv)
 {
-	if(argc ==  1 || argc == 2)
+	if(argc == 2)
 	{	
 		int i = 0;
-		char *func;
 		
-		func =(char *) malloc(16*sizeof(char));
-
-		while(argv[1][i])
+		if(!strcmp(argv[1],"isalpha"))
 		{
-			func[i] = argv[1][i];
-			i++;
+			printf("isalpha: %d \n", ft_isalpha(0));
 		}
-		if(!strcmp(argv[1],"isalpha") || argc == 1)
+		if(!strcmp(argv[1],"isdigit"))
 		{
-			printf("isalpha:  \n", ft_isalpha(0));
+			printf("isdigit: %d \n", ft_isdigit(0));
 		}
-		if(!strcmp(argv[1],"isdigit") || argc == 1)
+		if(!strcmp(argv[1],"isalnum"))
 		{
-			printf("isdigit:  \n", ft_isdigit(0));
+			printf("isalnum: %d \n", ft_isalnum(0));
 		}
-		if(!strcmp(argv[1],"isalnum") || argc == 1)
+		/*if(!strcmp(argv[1],"isascii"))
 		{
-			printf("isalnum:  \n", ft_isalnum(0));
+			printf("isascii: %d \n", ft_isascii(0));
 		}
-		if(!strcmp(argv[1],"isascii") || argc == 1)
+		if(!strcmp(argv[1],"isprint"))
 		{
-			printf("isascii:  \n", ft_isascii(0));
-		}
-		if(!strcmp(argv[1],"isprint") || argc == 1)
+			printf("isprint: %d \n", ft_isprint(0));
+		} 
+		if(!strcmp(argv[1],"strlen"))
 		{
-			printf("isprint:  \n", ft_isprint(0));
+			printf("strlen: %d \n", ft_strlen(0));
 		}
-		if(!strcmp(argv[1],"strlen") || argc == 1)
+		if(!strcmp(argv[1],"memset"))
 		{
-			printf("strlen:  \n", ft_strlen(0));
+			printf("memset: %d \n", ft_memset(0));
 		}
-		if(!strcmp(argv[1],"memset") || argc == 1)
+		if(!strcmp(argv[1],"bzero"))
 		{
-			printf("memset:  \n", ft_memset(0));
+			printf("bzero: %d \n", ft_bzero(0));
 		}
-		if(!strcmp(argv[1],"bzero") || argc == 1)
+		if(!strcmp(argv[1],"memcpy"))
 		{
-			printf("bzero:  \n", ft_bzero(0));
+			printf("memcpy: %d \n", ft_memcpy(0));
 		}
-		if(!strcmp(argv[1],"memcpy") || argc == 1)
+		if(!strcmp(argv[1],"memmove"))
 		{
-			printf("memcpy:  \n", ft_memcpy(0));
+			printf("memmove: %d \n", ft_memmove(0));
 		}
-		if(!strcmp(argv[1],"memmove") || argc == 1)
+		if(!strcmp(argv[1],"strlcpy"))
 		{
-			printf("memmove:  \n", ft_memmove(0));
+			printf("strlcpy: %d \n", ft_strlcpy(0));
 		}
-		if(!strcmp(argv[1],"strlcpy") || argc == 1)
+		if(!strcmp(argv[1],"strlcat"))
 		{
-			printf("strlcpy:  \n", ft_strlcpy(0));
+			printf("strlcat: %d \n", ft_strlcat(0));
 		}
-		if(!strcmp(argv[1],"strlcat") || argc == 1)
+		if(!strcmp(argv[1],"toupper"))
 		{
-			printf("strlcat:  \n", ft_strlcat(0));
+			printf("toupper: %d \n", ft_toupper(0));
 		}
-		if(!strcmp(argv[1],"toupper") || argc == 1)
+		if(!strcmp(argv[1],"tolower"))
 		{
-			printf("toupper:  \n", ft_toupper(0));
+			printf("tolower: %d \n", ft_tolower(0));
 		}
-		if(!strcmp(argv[1],"tolower") || argc == 1)
+		if(!strcmp(argv[1],"strchr"))
 		{
-			printf("tolower:  \n", ft_tolower(0));
+			printf("strchr: %d \n", ft_strchr(0));
 		}
-		if(!strcmp(argv[1],"strchr") || argc == 1)
+		if(!strcmp(argv[1],"strrchr"))
 		{
-			printf("strchr:  \n", ft_strchr(0));
+			printf("strrchr: %d \n", ft_strrchr(0));
 		}
-		if(!strcmp(argv[1],"strrchr") || argc == 1)
+		if(!strcmp(argv[1],"strncmp"))
 		{
-			printf("strrchr:  \n", ft_strrchr(0));
+			printf("strncmp: %d \n", ft_strncmp(0));
 		}
-		if(!strcmp(argv[1],"strncmp") || argc == 1)
+		if(!strcmp(argv[1],"memchr"))
 		{
-			printf("strncmp:  \n", ft_strncmp(0));
+			printf("memchr: %d \n", ft_memchr(0));
 		}
-		if(!strcmp(argv[1],"memchr") || argc == 1)
+		if(!strcmp(argv[1],"memcmp"))
 		{
-			printf("memchr:  \n", ft_memchr(0));
+			printf("memcmp: %d \n", ft_memcmp(0));
 		}
-		if(!strcmp(argv[1],"memcmp") || argc == 1)
+		if(!strcmp(argv[1],"strnstr"))
 		{
-			printf("memcmp:  \n", ft_memcmp(0));
+			printf("strnstr: %d \n", ft_strnstr(0));
 		}
-		if(!strcmp(argv[1],"strnstr") || argc == 1)
+		if(!strcmp(argv[1],"atoi"))
 		{
-			printf("strnstr:  \n", ft_strnstr(0));
+			printf("atoi: %d \n", ft_atoi(0));
 		}
-		if(!strcmp(argv[1],"atoi") || argc == 1)
+		if(!strcmp(argv[1],"calloc"))
 		{
-			printf("atoi:  \n", ft_atoi(0));
+			printf("calloc: %d \n", ft_calloc(0));
 		}
-		if(!strcmp(argv[1],"malloc") || argc == 1)
+		if(!strcmp(argv[1],"strdup"))
 		{
-			printf("malloc:  \n", ft_malloc(0));
+			printf("strdup: %d \n", ft_strdup(0));
 		}
-		if(!strcmp(argv[1],"calloc") || argc == 1)
+		if(!strcmp(argv[1],"substr"))
 		{
-			printf("calloc:  \n", ft_calloc(0));
+			printf("substr: %d \n", ft_substr(0));
 		}
+		if(!strcmp(argv[1],"strjoin"))
+		{
+			printf("strjoin: %d \n", ft_strjoin(0));
+		}
+		if(!strcmp(argv[1],"strtrim"))
+		{
+			printf("strtrim: %d \n", ft_strtrim(0));
+		}
+		if(!strcmp(argv[1],"split"))
+		{
+			printf("split: %d \n", ft_split(0));
+		}
+		if(!strcmp(argv[1],"itoa"))
+		{
+			printf("itoa: %d \n", ft_itoa(0));
+		}
+		if(!strcmp(argv[1],"strmapi"))
+		{
+			printf("strmapi: %d \n", ft_strmapi(0));
+		}
+		if(!strcmp(argv[1],"striteri"))
+		{
+			printf("striteri: %d \n", ft_striteri(0));
+		}
+		if(!strcmp(argv[1],"putchar_fd"))
+		{
+			printf("putchar_fd: %d \n", ft_putchar_fd(0));
+		}
+		if(!strcmp(argv[1],"putstr_fd"))
+		{
+			printf("putstr_fd: %d \n", ft_putstr_fd(0));
+		}
+		if(!strcmp(argv[1],"putendl_fd"))
+		{
+			printf("putendl_fd: %d \n", ft_putendl_fd(0));
+		}
+		if(!strcmp(argv[1],"putnbr_fd"))
+		{
+			printf("putnbr_fd: %d \n", ft_putnbr_fd(0));
+		}
+		*/
 	}
 	else
 	{
