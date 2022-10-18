@@ -11,15 +11,15 @@ int main(int argc, char **argv)
 	{	
 		if(!strcmp(argv[1],"isalpha") || !strcmp(argv[1],"all"))
 		{
-			printf("isalpha: %d \n", ft_isalpha(0));
+			printf("isalpha: %d \n", ft_isalpha(65));
 		}
 		if(!strcmp(argv[1],"isdigit") || !strcmp(argv[1],"all"))
 		{
-			printf("isdigit: %d \n", ft_isdigit(0));
+			printf("isdigit: %d \n", ft_isdigit('4'));
 		}
 		if(!strcmp(argv[1],"isalnum") || !strcmp(argv[1],"all"))
 		{
-			printf("isalnum: %d \n", ft_isalnum(0));
+			printf("isalnum: %d \n", ft_isalnum(65));
 		}
 		if(!strcmp(argv[1],"isascii") || !strcmp(argv[1],"all"))
 		{
@@ -27,11 +27,11 @@ int main(int argc, char **argv)
 		}
 		if(!strcmp(argv[1],"isprint") || !strcmp(argv[1],"all"))
 		{
-			printf("isprint: %d \n", ft_isprint(0));
+			printf("isprint: %d \n", ft_isprint(30));
 		}
 		if(!strcmp(argv[1],"strlen") || !strcmp(argv[1],"all"))
 		{
-
+			ptr = strdup("harunaksu");
 			printf("strlen: %zu \n", ft_strlen(ptr));
 			free(ptr);
 		}
@@ -40,15 +40,22 @@ int main(int argc, char **argv)
 			ptr = strdup("harun_aksu");
 			printf("memset: %s \n",ft_memset((void*)ptr,88,3));
 			free(ptr);
-		}/*
+		}
 		if(!strcmp(argv[1],"bzero") || !strcmp(argv[1],"all"))
 		{
-			printf("bzero: %d \n", ft_bzero(0));
+			ptr = strdup("--------");
+			printf("bzero (before): %s | ",ptr);
+			ft_bzero(ptr,2);
+			printf("bzero (after): %s\n",ptr);
+			free(ptr);
 		}
 		if(!strcmp(argv[1],"memcpy") || !strcmp(argv[1],"all"))
 		{
-			printf("memcpy: %d \n", ft_memcpy(0));
-		}
+			ptr = strdup("harun");
+			void *dst = malloc(ft_strlen(ptr) * sizeof(char));
+			printf("memcpy: %d \n", ft_memcpy(dst, ptr,  4));
+			free(ptr);
+		}/*
 		if(!strcmp(argv[1],"memmove") || !strcmp(argv[1],"all"))
 		{
 			printf("memmove: %d \n", ft_memmove(0));
