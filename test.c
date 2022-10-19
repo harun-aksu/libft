@@ -46,19 +46,21 @@ int main(int argc, char **argv)
 			ptr = strdup("--------");
 			printf("bzero (before): %s | ",ptr);
 			ft_bzero(ptr,2);
-			printf("bzero (after): %s\n",ptr);
+			printf("bzero (after): %c\n",*(ptr+2));
 			free(ptr);
 		}
 		if(!strcmp(argv[1],"memcpy") || !strcmp(argv[1],"all"))
 		{
 			ptr = strdup("harun");
 			void *dst = malloc(ft_strlen(ptr) * sizeof(char));
-			printf("memcpy: %d \n", ft_memcpy(dst, ptr,  4));
+			ft_memcpy(dst, ptr,  4);
+			printf("%s",dst);
 			free(ptr);
 		}/*
 		if(!strcmp(argv[1],"memmove") || !strcmp(argv[1],"all"))
 		{
-			printf("memmove: %d \n", ft_memmove(0));
+			ptr = strdup("harun_aksu");
+			ft_memmove(0);
 		}
 		if(!strcmp(argv[1],"strlcpy") || !strcmp(argv[1],"all"))
 		{
