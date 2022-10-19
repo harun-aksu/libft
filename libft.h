@@ -22,7 +22,7 @@
 		
 	void *ft_memcpy(void *dst, const void *src, size_t n);
 		
-	int ft_memmove(int c);
+	//void *ft_memmove(void *dest, const );
 		
 	int ft_strlcpy(char *dst, const char *src, size_t dstsize);
 		
