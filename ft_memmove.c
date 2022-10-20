@@ -22,11 +22,6 @@ void    *ft_memmove(void *dest, const void *src, size_t len)
          *(char*)(dest+(i++)) = *(char*)(src+(i++));
    }
    
-   return(original_dest)
+   return(original_dest);
       
-       
-            
-} 
-
-
-    
+}
