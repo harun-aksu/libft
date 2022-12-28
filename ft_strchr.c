@@ -1,12 +1,18 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haksu <haksu@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/25 18:28:16 by haksu             #+#    #+#             */
+/*   Updated: 2022/12/25 18:28:16 by haksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int *ft_strchr(const char *s, int c)
+#include	"libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-    char    *str;
-
-    str = (char*)s;
-    while (*str != c) 
-        if (!(*str++))
-            return (NULL);       
-    return(0);
+	return (ft_memchr(s, c, ft_strlen(s) + 1));
 }

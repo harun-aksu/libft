@@ -1,14 +1,32 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haksu <haksu@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/25 18:26:58 by haksu             #+#    #+#             */
+/*   Updated: 2022/12/25 18:26:58 by haksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    *ft_memcpy(void *dst, const void *src, size_t n)
+#include	"libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    void    *original_dst; 
-    original_dst    =   dst;
+	size_t	i;
+	char	*dest2;
+	char	*src2;
 
-    if(!dst && !src)
-        return (0);
-    while(n-- > 0)
-        *(char*)(dst++) = *(char*)(src++);
-    
-    return(original_dst);
+	i = 0;
+	dest2 = (char *)dest;
+	src2 = (char *)src;
+	if (!n || src == dest)
+		return (dest);
+	while (i < n)
+	{
+		dest2[i] = src2[i];
+		i++;
+	}
+	return (dest);
 }
